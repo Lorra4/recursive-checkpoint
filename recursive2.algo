@@ -1,0 +1,25 @@
+FUNCTION function_power(base, exponent) 
+VAR
+    exponent: INTEGER ;
+    base, power: INTEGER ;
+BEGIN
+/*Dans ce pseudo-code, la fonction power() prend deux paramètres : base (le numéro de base) et exposant (la puissance à laquelle élever la base).
+
+Le cas de base est celui où l'exposant est égal à 0. Dans ce cas, la fonction renvoie 1 car tout nombre élevé à la puissance 0 est 1.
+
+Dans le cas récursif, si l'exposant est inférieur à 0, la fonction calcule l'inverse du résultat de puissance (base, -exposant). Cela gère les exposants négatifs.
+
+Si l'exposant est supérieur à 0, la fonction s'appelle récursivement avec les arguments base et exposant - 1, et renvoie le résultat de la multiplication de la base par le résultat de l'appel récursif.
+
+ Ceci effectue l'opération d'exponentiation en réduisant l'exposant de 1 à chaque appel récursif jusqu'à ce que le cas de base soit atteint. */
+    IF (exponent == 0) THEN
+        RETURN 1
+    ELSE_IF (exponent < 0) THEN
+        RETURN 1 / power(base, -exponent)
+    ELSE
+        RETURN base * power(base, exponent - 1)
+    END_IF
+    power(base, exponent) //La fonction renverra le résultat de l'exponentiation.
+    RETURN value ;
+END
+

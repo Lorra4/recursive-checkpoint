@@ -1,0 +1,40 @@
+FUNCTION function_isLeapYear(year) : return_boolean
+VAR
+    year : INTEGER;
+    true, false : BOOLEAN;
+    
+BEGIN
+     IF(year is divisible)  by 4 THEN
+
+    IF(year is divisible)  by 100 THEN
+
+    IF(year is divisible)  by 400 THEN // Divisible by 400, it's a leap year
+    
+        RETURN true ;
+    ELSE
+        RETURN false ;  // Divisible par 100 mais pas par 400, pas d'année bissextile
+    END_IF
+
+    ELSE
+        RETURN true ;  // Divisible par 4 mais pas par 100, année bissextile
+    END_IF
+
+    ELSE
+        RETURN false ;  // Pas Divisible par 4, pas d'année bissextile
+    END_IF
+
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

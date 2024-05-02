@@ -1,0 +1,19 @@
+FUNCTION function_fibonacci(INTEGER) 
+VAR
+    n: INTEGER;
+BEGIN
+/*Dans ce pseudo code, la fonction fibonacci() prend un paramètre n qui représente la position du nombre de Fibonacci à générer.
+
+Le cas de base est lorsque n est inférieur ou égal à 1. Dans ce cas, la fonction renvoie simplement n puisque la séquence de Fibonacci commence par 0 et 1.
+
+Dans le cas récursif, lorsque n est supérieur à 1, la fonction s'appelle récursivement avec les arguments n-1 et n-2, et renvoie la somme des nombres de Fibonacci aux positions n-1 et n-2. */
+    IF (n <= 1 ) THEN
+        RETURN n
+    ELSE
+       RETURN fibonacci(n-1) + fibonacci(n-2) 
+    END_IF
+    fibonacci(n) //La fonction renverra le nth nombre de Fibonacci.
+    RETURN value ;
+END
+
+
